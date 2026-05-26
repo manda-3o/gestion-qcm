@@ -1,0 +1,40 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.gestionqcm:gestion-qcm >---------------------
+[INFO] Building Gestion QCM 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ gestion-qcm ---
+[INFO] Deleting D:\JSP_PROJECTS\QCM\gestion_qcm_mvc\gestionqcm\target
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ gestion-qcm ---
+[INFO] skip non existing resourceDirectory D:\JSP_PROJECTS\QCM\gestion_qcm_mvc\gestionqcm\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ gestion-qcm ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug target 11] to target\classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ gestion-qcm ---
+[INFO] skip non existing resourceDirectory D:\JSP_PROJECTS\QCM\gestion_qcm_mvc\gestionqcm\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ gestion-qcm ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ gestion-qcm ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- war:3.3.2:war (default-war) @ gestion-qcm ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [gestion-qcm] in [D:\JSP_PROJECTS\QCM\gestion_qcm_mvc\gestionqcm\target\gestion-qcm]
+[INFO] Processing war project
+[INFO] Copying webapp resources [D:\JSP_PROJECTS\QCM\gestion_qcm_mvc\gestionqcm\src\main\webapp]
+[INFO] Building war: D:\JSP_PROJECTS\QCM\gestion_qcm_mvc\gestionqcm\target\gestion-qcm.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.076 s
+[INFO] Finished at: 2026-05-26T08:40:36+03:00
+[INFO] ------------------------------------------------------------------------

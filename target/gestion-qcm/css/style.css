@@ -1,0 +1,202 @@
+/* ═══════════════════════════════════════════════════════════
+   GestionQCM — Feuille de style principale
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+    --sidebar-bg:    #1E2A4A;
+    --sidebar-w:     215px;
+    --primary:       #3B5BDB;
+    --primary-light: #EEF2FF;
+    --border:        #E5E7EB;
+    --bg:            #F7F8FC;
+    --card-bg:       #FFFFFF;
+    --text:          #111827;
+    --muted:         #6B7280;
+    --success:       #059669;
+    --danger:        #EF4444;
+    --warning:       #D97706;
+    --purple:        #7C3AED;
+}
+
+/* ─── Layout ────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', sans-serif; font-size: 13px; background: var(--bg); color: var(--text); }
+
+.wrapper { display: flex; height: 100vh; overflow: hidden; }
+
+/* ─── Sidebar ───────────────────────────────────────────── */
+.sidebar {
+    width: var(--sidebar-w);
+    background: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 20px 16px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.sidebar-sub {
+    font-size: 10px;
+    color: rgba(255,255,255,.35);
+    margin-top: 3px;
+    font-weight: 400;
+}
+
+.sidebar-section {
+    padding: 12px 16px 4px;
+    font-size: 9px;
+    font-weight: 700;
+    color: rgba(255,255,255,.25);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 16px;
+    color: rgba(255,255,255,.60);
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all .15s;
+}
+.sidebar .nav-link:hover { color: #fff; background: rgba(255,255,255,.05); }
+.sidebar .nav-link.active {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    border-left-color: #748FFC;
+}
+.sidebar .nav-link i { font-size: 15px; }
+
+.sidebar-footer { margin-top: auto; padding: 12px 16px; }
+.sidebar-note {
+    background: rgba(255,255,255,.05);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 10px;
+    color: rgba(255,255,255,.30);
+    line-height: 1.5;
+}
+.sidebar-note strong { color: rgba(255,255,255,.45); }
+
+/* ─── Main content ──────────────────────────────────────── */
+.main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+.topbar {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.topbar-title { font-size: 14px; font-weight: 600; }
+.topbar-badges { display: flex; gap: 6px; }
+
+.page-body { flex: 1; overflow-y: auto; padding: 18px 20px; }
+
+/* ─── Cards ─────────────────────────────────────────────── */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    margin-bottom: 14px;
+}
+.card-body { padding: 16px; }
+.sec-title { font-size: 13px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+
+/* ─── Stats cards ───────────────────────────────────────── */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+.stat-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.stat-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 17px; flex-shrink: 0; }
+.stat-val  { font-size: 20px; font-weight: 700; }
+.stat-lbl  { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+
+/* ─── Tableau ───────────────────────────────────────────── */
+.table { font-size: 12px; }
+.table th { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; background: var(--bg); border-bottom: 2px solid var(--border) !important; padding: 8px 10px !important; }
+.table td { padding: 8px 10px !important; vertical-align: middle; border-bottom: 1px solid var(--border) !important; }
+
+/* ─── Avatar ────────────────────────────────────────────── */
+.avatar {
+    width: 26px; height: 26px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 700; color: #fff; flex-shrink: 0;
+    margin-right: 7px;
+}
+
+/* ─── Badges personnalisés ──────────────────────────────── */
+.badge-niveau    { background: var(--primary-light); color: var(--primary); font-weight: 600; }
+.badge-note-ok   { background: #D1FAE5; color: var(--success); font-weight: 700; }
+.badge-note-ko   { background: #FEE2E2; color: var(--danger); font-weight: 700; }
+
+/* ─── Barre de progression ──────────────────────────────── */
+.prog-wrap { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-bottom: 14px; }
+.prog-fill { height: 100%; background: var(--primary); border-radius: 3px; transition: width .4s; }
+
+/* ─── Formulaires ───────────────────────────────────────── */
+.form-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 4px; }
+.form-control, .form-select { font-size: 12px; border-color: var(--border); background: var(--bg); }
+.form-control:focus, .form-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(59,91,219,.12); }
+
+/* ─── Boutons ───────────────────────────────────────────── */
+.btn { font-size: 12px; font-weight: 600; border-radius: 7px; }
+.btn-sm { padding: 4px 10px; font-size: 11px; }
+.btn-primary { background: var(--primary); border-color: var(--primary); }
+
+/* ─── QCM : options radio ───────────────────────────────── */
+.radio-opt {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 13px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 12px;
+    transition: all .15s;
+    user-select: none;
+}
+.radio-opt:hover { border-color: var(--primary); background: var(--primary-light); }
+.radio-opt input[type=radio] { accent-color: var(--primary); width: 16px; height: 16px; }
+.radio-opt.selected { border-color: var(--primary); background: var(--primary-light); font-weight: 600; color: var(--primary); }
+
+/* ─── Résultats examen ──────────────────────────────────── */
+.result-ok  { background: #D1FAE5; border-radius: 7px; padding: 9px 12px; margin-bottom: 6px; font-size: 12px; line-height: 1.6; }
+.result-ko  { background: #FEE2E2; border-radius: 7px; padding: 9px 12px; margin-bottom: 6px; font-size: 12px; line-height: 1.6; }
+
+/* ─── Mail préview ──────────────────────────────────────── */
+.mail-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ─── Classement médailles ──────────────────────────────── */
+.medal { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+
+/* ─── Effectif niveau ───────────────────────────────────── */
+.niv-pill { background: var(--primary-light); color: var(--primary); border-radius: 8px; padding: 8px 14px; text-align: center; min-width: 56px; }
+.niv-pill .niv-val { font-size: 18px; font-weight: 700; display: block; }
+.niv-pill .niv-lbl { font-size: 10px; color: var(--muted); }
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .sidebar { width: 60px; }
+    .sidebar-header span, .sidebar .nav-link span, .sidebar-section,
+    .sidebar-footer, .sidebar-sub { display: none; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+}
